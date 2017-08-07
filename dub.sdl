@@ -1,0 +1,6 @@
+name "dcms"
+description "dcms"
+authors "Dmitry Bubnenkov"
+copyright "Dmitry Bubnenkov"
+license "MIT"
+dependency "vibe-d" version="~>0.8.0"
