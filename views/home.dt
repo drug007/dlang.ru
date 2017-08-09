@@ -1,6 +1,6 @@
 extends layout
 block content
-   span.fa.fa-telegram
+   p
       a(href='https://t.me/dlangru') Telegram Group
    p 
       a(href="http://dlang.org/download.html") Скачать компилятор
