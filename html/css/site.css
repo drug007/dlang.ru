@@ -5,7 +5,7 @@
       height: 100%;
       margin: 0px;
       background-image: url(bg.png);
-      font-size: 14px;
+      font-size: 15px;
     }
 
   @media (min-width: 1080px) {  
@@ -223,3 +223,14 @@
     padding-left: 2px;
     padding-right: 2px;
   }
+
+  dt
+  {
+    background-color: #eae5db;
+  }
+
+  dd
+  {
+    margin: 10px;
+  }
+
