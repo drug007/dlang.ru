@@ -1,20 +1,11 @@
 window.onload = function() {
 
-	const NotFound = { template: '<p>Page not found</p>' }
-	const Home = { template: '<p>home page</p>' }
-	const Faq = { template: '<p>Faq page</p>' }
-	const Book = { template: `
-	<div>
-			<div class="bookContent">
-			<div v-html="all_content"></div>
-			</div>
-	</div>`, 
-	data() {
-		return {
-		 all_content: ''
-		}
-	},
-	methods: 
+	new Vue({
+	  el: '#app',
+	  data: {
+	     all_content: ''
+	  },
+	  methods:
 	  {
 	  	LoadData()
 	  	{
@@ -31,27 +22,6 @@ window.onload = function() {
 	 {
 	 	this.LoadData();
 	 } 
-
-	}
-
-
-	const routes = [
-	  {path: '/', component: Home},
-	  {path: '/book', component: Book},
-	  {path: '/faq', component: Faq}
-	]
-
-	const router = new VueRouter({
-  		routes, // short for `routes: routes`
-  		mode: 'history'
-		})
-
-	new Vue({
-	  el: '#app',
-	  router,
-	  data: {
-	    
-	  },
 
 	})
 

@@ -15,7 +15,9 @@ void main()
 
 	auto router = new URLRouter;
 	router.get("*", serveStaticFiles("html/"));
-	//router.get("/", &home);
+	router.get("/", staticTemplate!"home.dt");
+	router.get("/faq", staticTemplate!"faq.dt");
+	router.get("/book", staticTemplate!"book.dt");
 	router.get("/data", &data);
 
 	listenHTTP(settings, router);
