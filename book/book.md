@@ -1721,7 +1721,7 @@ getopt(args, "output", &outputFiles);
 ```
 > app.exe -l Jow
 
-std.getopt.GetOptException@C:\D\dmd2\windows\bin\..\..\src\phobos\std\getopt.d(727): Required option password|p was not supplied
+std.getopt.GetOptException@\src\phobos\std\getopt.d(727): Required option password|p was not supplied
 ```
 
 #####Генерация help
