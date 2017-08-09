@@ -227,10 +227,12 @@
   dt
   {
     background-color: #eae5db;
+    padding-left: 5px;
   }
 
   dd
   {
-    margin: 10px;
+    margin-left: 5px;
+    text-indent: 15px;
   }
 
