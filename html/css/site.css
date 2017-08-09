@@ -1,4 +1,4 @@
-/* @import "prism.css";  */
+ /*@import "prism.css";  */
    
    html,
     body {
@@ -20,12 +20,14 @@
     }
   }
 
+/* Mobile View */
 @media (max-width: 1080px) {  
     .MainContainer {
       background-color: #f7f5f0;
       margin-left: 0%;
       margin-right: 0%;
       min-height: 100vh;
+      min-width: 100%;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -72,8 +74,9 @@
     .Middle 
     {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-grow: 1;
+      min-width: 100%;
     }
 
     .MiddleBody
@@ -176,7 +179,7 @@
 
   code 
   {
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
   }
 
   .tips
@@ -195,6 +198,9 @@
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
+    /*overflow-wrap: break-word;*/
+
+
   }
 
   h1, h2, h3, h4, h5
@@ -214,6 +220,6 @@
 
   .bookContent
   {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
   }
