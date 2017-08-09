@@ -1,4 +1,5 @@
  /*@import "prism.css";  */
+ @import "font-awesome.css";
    
    html,
     body {
@@ -218,7 +219,7 @@
         padding-left: 10px;
      }
 
-  .bookContent
+  .bookcontent
   {
     padding-left: 2px;
     padding-right: 2px;
