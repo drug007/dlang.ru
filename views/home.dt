@@ -10,20 +10,23 @@ block content
                   .CompilerName DMD
                   .CompilerLogo
                      img(src='/imgs/dmd_logo_128.png')
-                  .CompilerDescription DMD text
-                  .CompilerDownloadLink DMD dowload
+                  .CompilerDescription <!-- пока тут пусто -->
+                  .CompilerDownloadLink 
+                     a(href='http://dlang.org/download.html#dmd') download
                .DownloadItemCompiler
                   .CompilerName GDC
                   .CompilerLogo
                      img(src='/imgs/gdc_logo_128.png')
-                  .CompilerDescription GDC text
-                  .CompilerDownloadLink GDC download
+                  .CompilerDescription <!-- пока тут пусто -->
+                  .CompilerDownloadLink
+                     a(href='https://gdcproject.org/downloads') download
                .DownloadItemCompiler
                   .CompilerName LDC
                   .CompilerLogo
                      img(src='/imgs/ldc_logo_128.png')
-                  .CompilerDescription LDC text
-                  .CompilerDownloadLink LDC dowload
+                  .CompilerDescription <!-- пока тут пусто -->
+                  .CompilerDownloadLink
+                     a(href='https://github.com/ldc-developers/ldc#installation') download
             .DownloadToolsOnMainPageIDE
                .DownloadItemIDE
                   .IDEItemName DLangeIDE
@@ -33,7 +36,7 @@ block content
                   .IDEItemLink download
 
          .ToolsScreenshots
-            | screenshots here
+            img(src='/imgs/ide/sublime.png')
    .RightMenu
       .RightMenuHeader Menu
       .RightMenuHeaderItems

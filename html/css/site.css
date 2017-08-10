@@ -129,7 +129,7 @@
 
 .LeftContainerTop
 {
-  border: 1px solid green;
+  border: 1px dashed black;
   flex-grow: 0.4;
   display: flex;
   align-items: center;
@@ -229,7 +229,7 @@ details img
 
 .SliderInContainerOnMainPage
 {
-  border: 1px dashed black;
+  /*border: 1px dashed black;*/
   /*flex-grow: 1;
   height: 90px;*/
   margin-top: 10px;
@@ -248,14 +248,14 @@ details img
 {
   display: flex;
   flex-direction: column;
-  border: 1px dashed black;
+  /*border: 1px dashed black;*/
 }
 
 .DownloadToolsOnMainPageCompilers
 {
   display: flex;
   flex-direction: row;
-  border: 1px dashed black;
+  /*border: 1px dashed black;*/
 }
 
 .DownloadItemCompiler
@@ -265,18 +265,28 @@ details img
   padding: 10px;
 }
 
+.CompilerDownloadLink
+{
+  align-self: center;
+}
+
+.CompilerName
+{
+ align-self: center;
+ font-weight: bold;
+ font-size: 1.2em;
+}
+
 .DownloadToolsOnMainPageIDE
 {
   display: flex;
   flex-direction: row;
-/*  width: 70px;
-  height: 70px;*/
-  border: 1px dashed black;
+  /*border: 1px dashed black;*/
   justify-content: space-around;
 
 }
 
 .ToolsScreenshots
 {
-  border: 1px dashed red;
+  /*border: 1px dashed red;*/
 }
