@@ -26,8 +26,8 @@ block content
                   .CompilerDownloadLink LDC dowload
             .DownloadToolsOnMainPageIDE
                .DownloadItemIDE
-               .IDEItemName DLangeIDE
-               .IDEItemLink download
+                  .IDEItemName DLangeIDE
+                  .IDEItemLink download
                .DownloadItemIDE
                   .IDEItemName Coedit
                   .IDEItemLink download
