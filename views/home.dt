@@ -1,8 +1,43 @@
 extends layout
 block content
-   p
-      a(href='https://t.me/dlangru') Telegram Group
-   p 
-      a(href="http://dlang.org/download.html") Скачать компилятор
+   .LeftContainer
+      .LeftContainerTop
+         .SliderInContainerOnMainPage
+      .LeftContainerBottom
+         .DownloadToolsOnMainPage
+            .DownloadToolsOnMainPageCompilers
+               .DownloadItemCompiler
+                  .CompilerName DMD
+                  .CompilerLogo
+                     img(src='/imgs/dmd.png')
+                  .CompilerDescription DMD text
+                  .CompilerDownloadLink DMD dowload
+               .DownloadItemCompiler
+                  .CompilerName GDC
+                  .CompilerLogo
+                     img(src='/imgs/gdc.png')
+                  .CompilerDescription GDC text
+                  .CompilerDownloadLink GDC download
+               .DownloadItemCompiler
+                  .CompilerName LDC
+                  .CompilerLogo
+                     img(src='/imgs/ldc.png')
+                  .CompilerDescription LDC text
+                  .CompilerDownloadLink LDC dowload
+            .DownloadToolsOnMainPageIDE
+               .DownloadItemIDE
+               .IDEItemName DLangeIDE
+               .IDEItemLink download
+               .DownloadItemIDE
+                  .IDEItemName Coedit
+                  .IDEItemLink download
 
-
+         .ToolsScreenshots
+            | screenshots here
+   .RightMenu
+      .RightMenuHeader Menu
+      .RightMenuHeaderItems
+         .fa.fa-telegram.icon-large.RightMenuHeaderSingleItem
+            a(href='https://t.me/dlangru') Telegram Group
+         .fa.fa-clipboard.icon-large.RightMenuHeaderSingleItem
+            a(href='http://paste.code123.org') Paste Code Service
