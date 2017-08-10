@@ -17,11 +17,11 @@ html
          .MainContainer
             .Header
                .HeaderMenu
-                  .HeaderBlock
+                  .HeaderMenuItem
                      a(href='/') General
-                  .HeaderBlock
+                  .HeaderMenuItem
                      a(href='/faq') FAQ
-                  .HeaderBlock
+                  .HeaderMenuItem
                      a(href='/book') Book
                .HeaderLoginBlock Sign in
             .Middle
