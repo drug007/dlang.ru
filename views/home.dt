@@ -29,11 +29,11 @@ block content
                      a(href='https://github.com/ldc-developers/ldc#installation') download
             .DownloadToolsOnMainPageIDE
                .DownloadItemIDE
-                  .IDEItemName DLangeIDE
-                  .IDEItemLink download
+                  //  .IDEItemName DLangeIDE
+                  //  .IDEItemLink download
                .DownloadItemIDE
-                  .IDEItemName Coedit
-                  .IDEItemLink download
+                  //  .IDEItemName Coedit
+                  //  .IDEItemLink download
 
          .ToolsScreenshots
             img(src='/imgs/ide/sublime.png')
