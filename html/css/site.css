@@ -262,8 +262,7 @@ details img
 {
   display: flex;
   flex-direction: column;
-  height: 100px;
-  width: 100px;
+  padding: 10px;
 }
 
 .DownloadToolsOnMainPageIDE

@@ -9,19 +9,19 @@ block content
                .DownloadItemCompiler
                   .CompilerName DMD
                   .CompilerLogo
-                     img(src='/imgs/dmd.png')
+                     img(src='/imgs/dmd_logo_128.png')
                   .CompilerDescription DMD text
                   .CompilerDownloadLink DMD dowload
                .DownloadItemCompiler
                   .CompilerName GDC
                   .CompilerLogo
-                     img(src='/imgs/gdc.png')
+                     img(src='/imgs/gdc_logo_128.png')
                   .CompilerDescription GDC text
                   .CompilerDownloadLink GDC download
                .DownloadItemCompiler
                   .CompilerName LDC
                   .CompilerLogo
-                     img(src='/imgs/ldc.png')
+                     img(src='/imgs/ldc_logo_128.png')
                   .CompilerDescription LDC text
                   .CompilerDownloadLink LDC dowload
             .DownloadToolsOnMainPageIDE
