@@ -3,6 +3,9 @@ block content
    .LeftContainer
       .LeftContainerTop
          .SliderInContainerOnMainPage
+            .LeftPartOfSlider
+            .RightPartOfSlider
+               include codesnippets
       .LeftContainerBottom
          .DownloadToolsOnMainPage
             .DownloadToolsOnMainPageCompilers

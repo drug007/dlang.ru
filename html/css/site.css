@@ -129,7 +129,7 @@
 
 .LeftContainerTop
 {
-  border: 1px dashed black;
+  /*border: 1px dashed black;*/
   flex-grow: 0.4;
   display: flex;
   align-items: center;
@@ -165,6 +165,7 @@ li {
 code 
 {
   margin-bottom: 10px;
+  
 }
 
 .tips
@@ -230,10 +231,19 @@ details img
 .SliderInContainerOnMainPage
 {
   /*border: 1px dashed black;*/
-  /*flex-grow: 1;
-  height: 90px;*/
+  flex-grow: 1;
+  /*height: 90px;*/
+  display: flex;
+  flex-direction: row;
   margin-top: 10px;
   padding-bottom: 10px;
+  justify-content: flex-end;
+}
+
+.RightPartOfSlider
+{
+  padding-right: 20px;
+  align-self: flex-start;
 }
 
 .LeftContainerBottom
