@@ -14,13 +14,13 @@ block content
                         .CompilerDescription <!-- пока тут пусто -->
                         .CompilerDownloadLink 
                            a(href='http://dlang.org/download.html#dmd') download
-                     .DownloadItemCompiler
-                        .CompilerName GDC
-                        .CompilerLogo
-                           img(src='/imgs/gdc_logo_128.png')
-                        .CompilerDescription <!-- пока тут пусто -->
-                        .CompilerDownloadLink
-                           a(href='https://gdcproject.org/downloads') download
+                     //.DownloadItemCompiler
+                     //   .CompilerName GDC
+                     //   .CompilerLogo
+                     //      img(src='/imgs/gdc_logo_128.png')
+                     //   .CompilerDescription 
+                     //   .CompilerDownloadLink
+                     //      a(href='https://gdcproject.org/downloads') download
                      .DownloadItemCompiler
                         .CompilerName LDC
                         .CompilerLogo
