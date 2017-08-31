@@ -130,10 +130,10 @@
 .LeftContainerTop
 {
   /*border: 1px dashed black;*/
-  flex-grow: 0.4;
+  flex-grow: 0.1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+  /*justify-content: center;*/
 
 }
 
@@ -237,13 +237,32 @@ details img
   flex-direction: row;
   margin-top: 10px;
   padding-bottom: 10px;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+}
+
+.CenterPartOfSlider
+{
+  align-self: center;
+  /*border: 1px dashed black;*/
+  /*flex-grow: 0.5;*/
+  /*justify-content: flex-start;*/
+  flex-grow: 0.3;
+}
+
+.LeftPartOfSlider
+{
+  flex-grow: 0.3;
 }
 
 .RightPartOfSlider
 {
-  padding-right: 20px;
-  align-self: flex-start;
+  /*padding-right: 20px;*/
+  /*align-self: flex-end;*/
+  /*display: none;*/
+  /*border: 3px black solid;*/
+  align-self: stretch;
+  flex-grow: 0.3;
 }
 
 .LeftContainerBottom
@@ -259,6 +278,7 @@ details img
   display: flex;
   flex-direction: column;
   /*border: 1px dashed black;*/
+  align-items: flex-end;
 }
 
 .DownloadToolsOnMainPageCompilers

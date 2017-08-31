@@ -10,7 +10,7 @@ void main()
 {
 	text = readText("./book/book.md");
 	auto settings = new HTTPServerSettings;
-	settings.port = 8080;
+	settings.port = 8082;
 	settings.bindAddresses = ["::1", "127.0.0.1"];
 
 	auto router = new URLRouter;
