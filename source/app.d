@@ -3,12 +3,16 @@ import parser;
 import std.file;
 
 Json answer;
+string bookText;
 
-string text;
+static this()
+{
+	answer = convertMD2HTMLReturnJSON(bookText);
+}
 
 void main()
 {
-	text = readText("./book/book.md");
+	bookText = readText("./book/book.md");
 	auto settings = new HTTPServerSettings;
 	settings.port = 8082;
 	settings.bindAddresses = ["::1", "127.0.0.1"];
@@ -33,7 +37,5 @@ void main()
 
 void data(HTTPServerRequest req, HTTPServerResponse res)
 {
-	answer = convertMD2HTMLReturnJSON(text);
-	res.writeJsonBody(answer);
-	
+	res.writeJsonBody(answer);	
 }
