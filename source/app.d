@@ -5,16 +5,11 @@ import std.file;
 Json answer;
 string bookText;
 
-static this()
-{
-	answer = convertMD2HTMLReturnJSON(bookText);
-}
-
 void main()
 {
 	bookText = readText("./book/book.md");
 	auto settings = new HTTPServerSettings;
-	settings.port = 8082;
+	settings.port = 8080;
 	settings.bindAddresses = ["::1", "127.0.0.1"];
 
 	auto router = new URLRouter;
@@ -23,6 +18,8 @@ void main()
 	router.get("/faq", staticTemplate!"faq.dt");
 	router.get("/book", staticTemplate!"book.dt");
 	router.get("/data", &data);
+
+	answer = convertMD2HTMLReturnJSON(bookText);
 
 	listenHTTP(settings, router);
 	logInfo("Please open http://127.0.0.1/ in your browser.");
