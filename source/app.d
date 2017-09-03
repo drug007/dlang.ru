@@ -1,13 +1,13 @@
 import vibe.vibe;
 import parser;
-import std.file;
+import std.file, std.path;
 
 Json answer;
 string bookText;
 
 void main()
 {
-	bookText = readText("./book/book.md");
+	bookText = readText(thisExePath().dirName() ~ "/book/book.md");
 	auto settings = new HTTPServerSettings;
 	settings.port = 8082;
 	settings.bindAddresses = ["::1", "127.0.0.1"];
