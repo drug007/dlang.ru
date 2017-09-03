@@ -1,6 +1,9 @@
 name "dcms"
 description "dcms"
-authors "Dmitry Bubnenkov"
-copyright "Dmitry Bubnenkov"
-license "MIT"
+authors    "Dmitry Bubnenkov" "Pavel Chebotarev"
+copyright  "Dmitry Bubnenkov"
+license    "MIT"
+
 dependency "vibe-d" version="~>0.8.1"
+
+versions   "VibeNoSSL"
