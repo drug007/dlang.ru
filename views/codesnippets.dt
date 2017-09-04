@@ -5,10 +5,10 @@
 		pre.language-d
 			|void main() 
 			|{
-			|	import std.exception, std.stdio, std.process;
-			|	auto result = ["whoami"].execute;
-			|	enforce(result.status == 0);
-			|	result.output.write;
+			|    import std.exception, std.stdio, std.process;
+			|    auto result = ["whoami"].execute;
+			|    enforce(result.status == 0);
+			|    result.output.write;
 			| }
 	- if(i==1)
 		pre.language-d
@@ -21,15 +21,15 @@
 			|import vibe.vibe;
 			|void main()
 			|{
-			|	listenTCP(7, (conn) { conn.write(conn); });
-			|	runApplication();
+			|    listenTCP(7, (conn) { conn.write(conn); });
+			|    runApplication();
 			|}
 	- if(i==3)
 		pre.language-d
 			|import std.stdio;
 			|void main() 
 			|{ 
-			|	writefln("Hello World!");
+			|    writefln("Hello World!");
 			|}
 	- if(i==4)
 		pre.language-d
@@ -38,21 +38,21 @@
 			|import std.file;
 			|  
 			|void main() { 
-			|   File file = File("test.txt", "w"); 
-			|   file.writeln("hello");
-			|   file.close(); 
+			|    File file = File("test.txt", "w"); 
+			|    file.writeln("hello");
+			|    file.close(); 
 			|}
 	- if(i==5)
 		pre.language-d
 			|//Version (tag) and Version (level)
 			|import std.stdio;  
 			|void myFunction() { 
-			|   version(1) writeln("version1"); 
-			|   version(2) writeln("version2");     
+			|    version(1) writeln("version1"); 
+			|    version(2) writeln("version2");     
 			|}
 			|  
 			|void main() { 
-			|   myFunction(); 
+			|    myFunction(); 
 			|}
 	- if(i==6)
 		pre.language-d
