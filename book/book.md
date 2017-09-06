@@ -2607,7 +2607,7 @@ void main()
 {
 
   Factory fc = new Factory(); // создаем экземпляр фабричного метода
-  IDatabase dataBase = fc.getDbType("pg"); // передаем в интерфейс тип БД с который мы работаем в данный момент
+  IDatabase dataBase = fc.getDbType("pg"); // возвращаем из фабрики экземпляр класса с которым мы работаем в данный момент
   if(dataBase !is null)
     dataBase.getData( ... ) // получаем данные из какой-то уже абстрактной БД
   else
