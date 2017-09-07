@@ -76,7 +76,7 @@
   .Middle 
   {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     min-width: 100%;
   }
@@ -184,6 +184,11 @@ code
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
+}
+
+.inlineCodeBlock
+{
+  background-color: #F5ECCE;
 }
 
 h1, h2, h3, h4, h5
@@ -325,4 +330,10 @@ details img
 img 
 {
   max-width: 100%;
+}
+
+.forkme
+{
+  align-self: center;
+  padding-bottom: 10px;
 }
