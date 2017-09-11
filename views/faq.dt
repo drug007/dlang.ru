@@ -40,6 +40,9 @@ block content
 			details	
 				summary Пример 2
 				image(src='/imgs/go-vs-d_2.png')
+			details	
+				summary Пример 3
+				image(src='/imgs/go-vs-d_3.png')				
 
 			p Go Хорош только для:
 				ul
