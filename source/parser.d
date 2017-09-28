@@ -104,7 +104,7 @@ Json convertMD2HTMLReturnJSON(string text)
 
     Json mydata = Json.emptyObject;
     mydata["content"] = `<ul>` ~ tableOfContent ~ `</ul>` ~ "\n" ~ new_content2;
-
+    //std.file.write("output.txt", new_content2);
     return mydata;
 }
 
