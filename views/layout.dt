@@ -6,7 +6,7 @@ html
       link(rel='stylesheet', type='text/css', href='css/site.css')
       meta(name='viewport', content='width=device-width,initial-scale=1,minimal-ui')
       meta(charset='utf-8')
-      meta(name='description', content='D - это современный мультипарадигменный язык программирования. Сочетает в себе простоту Python и производительность чистого Си')
+      meta(name='description', content='D - это современный мультипарадигменный язык программирования. Выгодно отличается от остальных хорошо читаемым синтаксисом и отсутствием необходимости таскать за собой виртуальную машину.')
       script(src='https://unpkg.com/vue')
       script(src='js/app.js')
       script(src='https://unpkg.com/vue-router/dist/vue-router.js')
