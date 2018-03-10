@@ -47,4 +47,4 @@ block content
          .fa.fa-telegram.icon-large.RightMenuHeaderSingleItem
             a(href='https://t.me/dlangru') Telegram Group
          .fa.fa-clipboard.icon-large.RightMenuHeaderSingleItem
-            a(href='https://github.com/deviator/duseful') Сборник рецептом
+            a(href='https://github.com/deviator/duseful') Сборник рецептов
