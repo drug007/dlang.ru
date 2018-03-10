@@ -1,5 +1,6 @@
  /*@import "prism.css";  */
  @import "font-awesome.css";
+ @import "mini-dark.css";
    
  html,
   body {
@@ -11,7 +12,7 @@
 
 @media (min-width: 1080px) {  
   .MainContainer {
-    background-color: #f7f5f0;
+    background-color: #F2F2F2;
     margin-left: 10%;
     margin-right: 10%;
     min-height: 100vh;
@@ -24,7 +25,7 @@
 /* Mobile View */
 @media (max-width: 1080px) {  
     .MainContainer {
-      background-color: #f7f5f0;
+      background-color: #F2F2F2;
       margin-left: 0%;
       margin-right: 0%;
       min-height: 100vh;
@@ -35,42 +36,12 @@
     }
   }
 
-  .Header {
-    flex-basis: 40px;
-    background-color: #ede1d3;
+  .Top 
+  {
+    background-color: #CDC7C7;
     display: flex;
     flex-direction: row;
     border: 1px solid black;
-  }
-
-  .HeaderMenu
-  {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-
-  .HeaderMenuItem {
-    border: 1px black solid;
-    text-align: center;
-    padding: 10px;
-    border: 1px black solid;
-    flex-basis: 10%;
-    box-sizing: border-box;
-  }
-
-  .HeaderLoginBlock {
-    align-self: center;
-    padding: 10px;
-    text-align: center;
-    flex-basis: 100px;
-    border: 1px black solid;
-  }
-
-  .HeaderBlock:hover
-  {
-    background-color: #e2d0ba;
   }
 
   .Middle 
@@ -79,6 +50,12 @@
     flex-direction: row;
     flex-grow: 1;
     min-width: 100%;
+    color: black;
+  }
+
+  .Footer
+  {
+
   }
 
   .bookBody
@@ -97,24 +74,37 @@
   display: flex;
 }
 
+
 .RightMenu
 {
-  /*background-color: #a1f5d0;*/
+  background-color: #F9F5F5;
   flex-direction: column;
   flex-grow: 0.1;
   display: flex;
 }
 
+
 .RightMenuHeader
 {
+  background-color: #E5E5E5;
   padding: 5px;
+  color: black;
 }
 
 .RightMenuHeaderItems
 {
   display: flex;
   flex-direction: column;
+  /*background-color: #9D6F3C;*/
+  color: black;
 }
+
+
+/*
+.RightMenuHeaderItems:hover
+{
+  background-color: red; 
+}*/
 
 .RightMenuHeaderSingleItem
 {
@@ -124,7 +114,7 @@
 .RightMenuHeaderSingleItem:hover
 {
   padding: 5px;
-  background-color: #F0E9E6;
+  background-color: #EBE7E7;
 }
 
 .LeftContainerTop
@@ -151,11 +141,6 @@ a
   text-decoration:none;
 }
 
-.footer 
-{
-  align-self: center;
-  background-color: #eae3e3;
-}
 
 .Middle li {
   list-style-type : none;
@@ -284,6 +269,7 @@ details img
   flex-direction: column;
   /*border: 1px dashed black;*/
   align-items: flex-end;
+  color: black;
 }
 
 .DownloadToolsOnMainPageCompilers

@@ -42,9 +42,9 @@ block content
          .ToolsScreenshots
             img(src='/imgs/ide/sublime.png')
    .RightMenu
-      .RightMenuHeader Menu
+      .RightMenuHeader Links
       .RightMenuHeaderItems
          .fa.fa-telegram.icon-large.RightMenuHeaderSingleItem
             a(href='https://t.me/dlangru') Telegram Group
          .fa.fa-clipboard.icon-large.RightMenuHeaderSingleItem
-            a(href='http://paste.code123.org') Paste Code Service
+            a(href='https://github.com/deviator/duseful') Сборник рецептом

@@ -17,17 +17,14 @@ html
    body
       #app
          .MainContainer
-            .Header
-               .HeaderMenu
-                  .HeaderMenuItem
-                     a(href='/') General
-                  .HeaderMenuItem
-                     a(href='/faq') FAQ
-                  .HeaderMenuItem
-                     a(href='/book') Book
-               .HeaderLoginBlock Sign in
+            .Top
+               .Header
+                  a.button(href='/') General
+                  a.button(href='/faq') FAQ
+                  a.button(href='/book') Book
             .Middle
                block content
-            include footer
+            .Footer
+               include footer
 
             
