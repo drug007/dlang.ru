@@ -10,7 +10,7 @@ void main()
 	bookText = readText(thisExePath().dirName() ~ "/book/book.md");
 	auto settings = new HTTPServerSettings;
 	settings.port = 8082;
-	settings.bindAddresses = ["127.0.0.1"];
+	settings.bindAddresses = ["0.0.0.0"];
 
 	auto router = new URLRouter;
 	router.get("*", serveStaticFiles("html/"));
