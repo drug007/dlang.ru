@@ -1,7 +1,0 @@
-extends layout
-block content
-	.bookBody
-		div(v-html='all_content')
-		.forkme
-			a(href='https://github.com/bubnenkoff/dlang.ru') Улучшить книгу на github
-

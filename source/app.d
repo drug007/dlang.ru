@@ -1,38 +1,50 @@
 import vibe.vibe;
-import parser;
-import std.file, std.path;
+import dini;
+import std.conv;
+import std.file;
+import std.path;
+import std.random;
 
-Json answer;
-string bookText;
-
+// Все проще чем ты думаешь!
 void main()
 {
-	bookText = readText(thisExePath().dirName() ~ "/book/book.md");
+	auto ini = Ini.Parse("config.ini");
 	auto settings = new HTTPServerSettings;
-	settings.port = 8082;
-	settings.bindAddresses = ["0.0.0.0"];
+	settings.port = to!ushort(ini.getKey("port"));
+	settings.bindAddresses = [ini.getKey("ipv6"), ini.getKey("ipv4")];
 
 	auto router = new URLRouter;
-	router.get("*", serveStaticFiles("html/"));
-	router.get("/", staticTemplate!"home.dt");
-	router.get("/faq", staticTemplate!"faq.dt");
-	router.get("/book", staticTemplate!"book.dt");
-	router.get("/data", &data);
-
-	answer = convertMD2HTMLReturnJSON(bookText);
+	router.get("/api/book", &bookAPI);
+	router.get("/api/faq", &faqAPI);
+	router.get("/api/code-snippets", &codeSnippetsAPI);
+	router.get("*", serveStaticFiles("web/dist/"));	
 
 	listenHTTP(settings, router);
-	logInfo("Please open http://127.0.0.1/ in your browser.");
 	runApplication();
 }
 
-//void home(HTTPServerRequest req, HTTPServerResponse res)
-//{
-//	res.render!("index.dt");
-//}
-
-
-void data(HTTPServerRequest req, HTTPServerResponse res)
+void bookAPI(HTTPServerRequest req, HTTPServerResponse res)
 {
-	res.writeJsonBody(answer);
+	//res.headers["Access-Control-Allow-Origin"] = "*";
+	string bookText; 
+	bookText = readText(thisExePath().dirName() ~ "/text/book.md");
+	res.writeBody(bookText);
+}
+
+void faqAPI(HTTPServerRequest req, HTTPServerResponse res)
+{
+	//res.headers["Access-Control-Allow-Origin"] = "*";
+	string faqText; 
+	faqText = readText(thisExePath().dirName() ~ "/text/faq.md");
+	res.writeBody(faqText);
+}
+
+void codeSnippetsAPI(HTTPServerRequest req, HTTPServerResponse res)
+{
+	//res.headers["Access-Control-Allow-Origin"] = "*";
+	string snippetsText; 
+	snippetsText = readText(thisExePath().dirName() ~ "/text/snippets.md");
+	auto snippetsTextArray = snippetsText.split("---"); // --- separatos between snipets
+	int randomNumber = uniform(0,to!int(snippetsTextArray.length)); 
+	res.writeBody(snippetsTextArray[randomNumber]); // return single snippets 
 }
