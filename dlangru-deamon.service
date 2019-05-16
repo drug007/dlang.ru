@@ -1,0 +1,11 @@
+[Unit]
+Description=dlang.ru
+
+[Service]
+Type=simple
+WorkingDirectory=/apps/dlang.ru
+ExecStart=/apps/dlang.ru/dlang
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

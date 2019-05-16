@@ -42,3 +42,9 @@ run
 if VPS have less than 2GB RAM you need pass the flag `--build-mode=singleFile`
 
 Do not forget to change `globalThis.base_url = "http://127.0.0.1:8081"` to current domain name.
+
+### Running
+
+`cp ./dlangru.service /etc/systemd/system/dlangru.service`
+
+`sudo systemctl enable dlangru`
