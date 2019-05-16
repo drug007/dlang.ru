@@ -5,7 +5,6 @@ void main()
     enforce(result.status == 0);
     result.output.write;
 }
-
 ---
 import std.algorithm: map;
 auto result = [1, 2, 3].map!(a => a + 1);
@@ -57,3 +56,8 @@ import std.algorithm: map, sum;
 import std.range: chunks;
 auto result = [1, 2, 3, 4].chunks(2).map!(sum);
 assert(result.equal([3, 7])); 
+---
+void main(string[] args)
+{
+    [1, 2, 3, 4, 5].sum.writeln;
+}
