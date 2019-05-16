@@ -65,6 +65,16 @@ html, body
   font-family: "Roboto Slab", sans-serif;
 }
 
+.el-header
+{
+  background-color: #ced5df;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+  padding: 0;
+  font-size: 1.4em;
+}
+
 /* for desktop (have mouse or touch pad) */
 @media (hover: hover) and (pointer: fine) 
 {
@@ -74,6 +84,17 @@ html, body
     margin: 0px auto;
     background-color: #e6e6e6; 
   }
+
+  .el-header
+  {
+    background-color: #ced5df;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+    padding: 0;
+    font-size: 1em;
+  }
+
 }
 
 .el-container 
@@ -83,18 +104,13 @@ html, body
 }
 
 
-.el-header, .el-footer 
+.el-footer 
 {
   background-color: #ced5df;
   color: #333;
   text-align: center;
-  line-height: 60px;
-  padding: 0;
-}
-
-.el-footer 
-{
   line-height: 40px;
+  padding: 0;
 }
 
 </style>

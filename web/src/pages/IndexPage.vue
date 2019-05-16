@@ -56,7 +56,6 @@ export default {
   {
     SideBar,
     Highlight,
-
   },
 
   created()
@@ -141,7 +140,7 @@ code
   font-size: 1.2em;
 }
 
-.el-image
+.middle > .el-image
 {
   max-width:80%;
   max-height:80%;
