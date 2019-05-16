@@ -52,12 +52,14 @@ export default {
 {
   width: 100%;
   font-size: 1.3em;
+  text-align: justify;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .md-body
   {
     width: 90%;
+    text-align: justify;
   }
 
 }
