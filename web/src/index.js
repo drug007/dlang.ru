@@ -8,6 +8,12 @@ import Axios from 'axios'
 import 'prismjs'
 import 'prismjs/themes/prism.css'
 
+import VueAnalytics from 'vue-analytics'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-38726992-1'
+})
+
 // change this for localization
 //import locale from 'element-ui/lib/locale/lang/ru-RU'
 //Vue.use(ElementUI, { locale })
