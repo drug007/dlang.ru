@@ -18,6 +18,7 @@ void main()
 	router.get("/api/faq", &faqAPI);
 	router.get("/api/code-snippets", &codeSnippetsAPI);
 	router.get("*", serveStaticFiles("web/dist/"));	
+	router.get("*", serveIndex("web/dist/")); // pass all other path trough Vue
 
 	listenHTTP(settings, router);
 	runApplication();
@@ -47,4 +48,17 @@ void codeSnippetsAPI(HTTPServerRequest req, HTTPServerResponse res)
 	auto snippetsTextArray = snippetsText.split("---"); // --- separatos between snipets
 	int randomNumber = uniform(0,to!int(snippetsTextArray.length)); 
 	res.writeBody(snippetsTextArray[randomNumber]); // return single snippets 
+}
+
+HTTPServerRequestDelegateS serveIndex(string path, HTTPFileServerSettings settings = null)
+{
+	import vibe.core.path: NativePath;
+	import vibe.http.fileserver: sendFile;
+
+  void callback(scope HTTPServerRequest req, scope HTTPServerResponse res)
+  {
+    sendFile(req, res, NativePath(path), settings);
+  }
+
+  return &callback;
 }
