@@ -51,6 +51,7 @@ export default {
 .md-body
 {
   width: 100%;
+  font-size: 1.3em;
 }
 
 @media (hover: hover) and (pointer: fine) {

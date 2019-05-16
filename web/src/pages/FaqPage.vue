@@ -46,4 +46,20 @@ export default {
   text-align: center;
 }
 
+/*  mobile (all devices except that have mouse or touch pad  */
+.md-body
+{
+  width: 100%;
+  font-size: 1.3em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .md-body
+  {
+    width: 90%;
+  }
+
+}
+
+
 </style>
