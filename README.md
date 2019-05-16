@@ -45,6 +45,8 @@ Do not forget to change `globalThis.base_url = "http://127.0.0.1:8081"` to curre
 
 ### Running
 
-`cp ./dlangru-deamon.service /etc/systemd/system/dlangru-deamon.service`
+`cp ./dlangru-deamon.service /etc/systemd/system/dlang-deamon.service`
 
-`sudo systemctl enable dlangru-deamon`
+`sudo systemctl enable dlang-deamon`
+
+`sudo systemctl start dlang-deamon`
