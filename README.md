@@ -38,3 +38,7 @@ add to `dub.sdl`
 
 run 
 `dub build`
+
+if VPS have less than 1GB RAM you will need the flag `--build-mode=singleFile`
+
+Do not forger to change `globalThis.base_url = "http://127.0.0.1:8081"` to current domain name.
