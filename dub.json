@@ -1,0 +1,24 @@
+{
+  "name": "dlang.org.ru",
+  "description": "",
+  "authors": [
+    "DarkRiDDeR"
+  ],
+  "homepage": "https://github.com/DarkRiDDeR/dlang.org.ru",
+  "license": "MIT",
+  "sourcePaths"    : ["server"],
+  "configurations" : [
+    {
+      "name"           : "app",
+      "targetType"     : "executable",
+      "targetName"     : "app",
+      "preRunCommands" : ["yarn build"],
+      "versions"       : ["VibeDefaultMain"],
+      "dependencies": {
+        "vibe-d": "~>0.8.5"
+      }
+    }
+  ],
+  "dependencies": {
+  }
+}
