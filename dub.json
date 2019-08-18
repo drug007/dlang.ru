@@ -1,19 +1,26 @@
 {
-  "name": "dlang.org.ru",
-  "description": "",
+  "name": "dlang.ru",
+  "description": "server side for dlang.ru",
   "authors": [
-    "DarkRiDDeR"
+    "Dmitry Bubnenkov", "DarkRiDDeR"
   ],
   "homepage": "https://github.com/DarkRiDDeR/dlang.org.ru",
   "license": "MIT",
-  "sourcePaths"    : ["server"],
-  "configurations" : [
+  "copyright": "Copyright © 2019, Dmitry Bubnenkov",
+  "sourcePaths": [
+    "server"
+  ],
+  "configurations": [
     {
-      "name"           : "app",
-      "targetType"     : "executable",
-      "targetName"     : "app",
-      "preRunCommands" : ["yarn build"],
-      "versions"       : ["VibeDefaultMain"],
+      "name": "app",
+      "targetType": "executable",
+      "targetName": "app",
+      "preRunCommands": [
+        "yarn build"
+      ],
+      "versions": [
+        "VibeDefaultMain"
+      ],
       "dependencies": {
         "vibe-d": "~>0.8.5"
       }

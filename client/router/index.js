@@ -5,7 +5,9 @@ Vue.use(Router);
 
 import Main from '../views/Main.vue'
 import NotFound from '../views/NotFound.vue'
-import FAQ from '../views/FAQ.vue'
+import Faq from '../views/Faq.vue'
+import Book from '../views/Book.vue'
+import Links from '../views/Links.vue'
 
 
 export default new Router({
@@ -17,8 +19,16 @@ export default new Router({
             component: Main
         },
         {
+            path: '/book',
+            component: Book
+        },
+        {
             path: '/faq',
-            component: FAQ
+            component: Faq
+        },
+        {
+            path: '/links',
+            component: Links
         },
         {
             path: '/404',

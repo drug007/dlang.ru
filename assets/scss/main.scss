@@ -15,19 +15,23 @@ html, body {
 
 body {
     font: normal 15px 'Open Sans', Arial, sans-serif;
-    color: #333;
+    color: #000;
     min-width: 960px;
 }
 
 * {
     outline: none;
 }
-h1, h2, h3 {
+h1, h2 {
     color: #93231C;
+}
+h1 {
+    font-size: 3em;
     text-align: center;
 }
 h2 {
     font-size: 2em;
+    text-align: center;
 }
 h3 {
     text-align: left;
@@ -80,10 +84,22 @@ ul {
     li + li {
         margin-top: 0.5em;
     }
+
+    ul li {
+        margin: 0;
+    }
+    ul li::before {
+        top: 8px;
+        width: 3px;
+        height: 3px;
+        background-color: transparent;
+        border: 1px solid #b2281e;
+    }
 }
 
 
 .container {
+    position: relative;
     width: calc(100% - 150px);
     min-width: 960px;
     max-width: 1366px;
@@ -501,9 +517,10 @@ footer {
 .vue-back-to-top .default {
     position: relative;
     background: #ce3a2fd6 !important;
-    width: 40px !important;;
-    height: 40px !important;;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 100% !important;
+    transition: .5s;
 
     &::before {
         display: block;
@@ -512,4 +529,13 @@ footer {
         background: url("../img/chevron-arrow-up.svg") center center no-repeat;
         background-size: 22px 14px;
     }
+}
+.vue-back-to-top:hover .default {
+    background: #ce3a2f !important;
+}
+
+.gh-btns {
+    display: flex;
+    margin: 10px 0;
+    justify-content: flex-end;
 }

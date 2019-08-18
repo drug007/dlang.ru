@@ -1,16 +1,52 @@
-# DVpV
+### About
+Russian community site about D Programming language.
 
-Example of Dlang Vibe.d plus Vue.js application
+### Book
 
-**Must be installed** dmd, dub, node.js, yarn.
+You are free to contribute to dlang.ru/book
 
-Run:
+### Contacts
 
-``dub run``
+Our Telegram channel https://t.me/dlangru
 
-Only generate rest js client with [vibed-rest-axios](https://github.com/DarkRiDDeR/vibed-rest-axios) 
+### Attention
 
-``dub run -c genrest``
+Site may not be open from Russia due to blocking from our goverment.
+Putin is a fascist! We do not support the military annexation of the Crimea!
 
-# License
-MIT
+### Screenshot
+![Screenshot](screenshot.webp)
+
+### Setup
+
+nodejs should be installed 
+
+`cd app_dir`
+
+`cd web`
+
+change prebuild command in package.json from `rmdir /s/q dist` to `rm -rf dist`
+
+run `npm install` if first run
+
+`npm run build`
+
+`cd ..`
+
+add to `dub.sdl`
+`dflags "-lowmem"`
+
+run 
+`dub build`
+
+if VPS have less than 2GB RAM you need pass the flag `--build-mode=singleFile`
+
+Do not forget to change `globalThis.base_url = "http://127.0.0.1:8081"` to current domain name.
+
+### Running
+
+`cp ./dlangru-deamon.service /etc/systemd/system/dlang-deamon.service`
+
+`sudo systemctl enable dlang-deamon`
+
+`sudo systemctl start dlang-deamon`
