@@ -296,13 +296,14 @@ section + section {
 
 
 .props {
-    padding: 200px 0 0;
-    margin-top: -200px;
+    padding: 130px 0 0;
+    margin-top: -130px;
     z-index: 1;
     position: relative;
 
     .wrap {
         width: 1000px;
+        max-width: 100%;
     }
 
     h2 {
