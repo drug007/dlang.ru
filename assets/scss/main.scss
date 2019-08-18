@@ -23,14 +23,14 @@ body {
     outline: none;
 }
 h1, h2, h3 {
+    color: #93231C;
     text-align: center;
 }
 h2 {
-    color: #93231C;
     font-size: 2em;
 }
 h3 {
-    color: #93231C;
+    text-align: left;
     font-size: 1.5em;
 }
 a {
@@ -45,6 +45,9 @@ a {
         border-bottom-color: #05b;
     }
 }
+img {
+    max-width: 100%;
+}
 button {
     cursor: pointer;
     transition: $elementTransition;
@@ -57,7 +60,7 @@ p + p {
 }
 ul {
     list-style: none;
-    padding: 1em 0 1em 15px;
+    padding: 1em 0 1em 2em;
     margin: 0;
 
     li {
@@ -121,7 +124,7 @@ header {
     position: relative;
     z-index: 2;
     height: 50px;
-    background-color: transparent; /*$darkRed;*/
+    background: linear-gradient(146deg, $darkRed, #962018);
 
     > .container {
         height: 100%;
@@ -158,6 +161,34 @@ header {
         }
     }
 }
+header.vue-fixed-header--isFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    animation: animated-fixed-menu .5s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+.header-substrate {
+    height: 50px;
+    display: none;
+    background: linear-gradient(146deg, $darkRed, #962018);
+}
+header.vue-fixed-header--isFixed + .header-substrate {
+    display: block;
+}
+@keyframes animated-fixed-menu {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0); }
+}
+
+
 .logo {
     width: 220px;
     border-bottom: none;
@@ -193,6 +224,7 @@ header {
         font-family: Arial, sans-serif;
         font-size: 4.5em;
         font-weight: normal;
+        color: #fff;
 
         &:first-letter {
             font-weight: bold;
@@ -275,6 +307,10 @@ section + section {
     }
 }
 .tiles {
+    ul {
+        padding: 1em 0 1em 15px;
+    }
+
     &-items, &-images, &-os, &-btns {
         display: flex;
         margin: 0 gutter() * -1;
@@ -388,7 +424,7 @@ section + section {
     @include absolute(8rem, auto, 8rem, 0);
     width: calc((100% - 1366px) / 4);
     min-width: 32px;
-    max-width: 100px;
+    max-width: 64px;
     overflow: hidden;
     background: $red;
     background: linear-gradient(146deg, $darkRed, $red);
@@ -418,7 +454,7 @@ section + section {
     @include absolute(8rem, 0, 8rem);
     width: calc((100% - 1366px) / 4);
     min-width: 32px;
-    max-width: 100px;
+    max-width: 64px;
     overflow: hidden;
     background: $red;
     background: linear-gradient(146deg, $darkRed, $red);
@@ -459,5 +495,21 @@ footer {
     }
     a {
         color: #3e74b7;;
+    }
+}
+
+.vue-back-to-top .default {
+    position: relative;
+    background: #ce3a2fd6 !important;
+    width: 40px !important;;
+    height: 40px !important;;
+    border-radius: 100% !important;
+
+    &::before {
+        display: block;
+        content: '';
+        @include absolute(0,0,0,0);
+        background: url("../img/chevron-arrow-up.svg") center center no-repeat;
+        background-size: 22px 14px;
     }
 }
