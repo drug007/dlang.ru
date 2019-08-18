@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-import HelloWorld from '../views/HelloWorld.vue'
+import Main from '../views/Main.vue'
 import NotFound from '../views/NotFound.vue'
 
 
@@ -13,7 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: HelloWorld
+      component: Main
     },
     {
       path: '/404',

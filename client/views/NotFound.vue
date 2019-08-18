@@ -1,6 +1,6 @@
 <template lang="pug">
-  div
-    h2 Error 404! Not found
+    div
+        h2 Error 404! Not found
 </template>
 
 <script>
