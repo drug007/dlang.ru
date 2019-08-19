@@ -16,7 +16,7 @@
       "targetType": "executable",
       "targetName": "app",
       "preRunCommands": [
-        "yarn build"
+        "npm run build"
       ],
       "versions": [
         "VibeDefaultMain"
