@@ -41,7 +41,7 @@ run
 
 if VPS have less than 2GB RAM you need pass the flag `--build-mode=singleFile`
 
-Do not forget to change `globalThis.base_url = "http://127.0.0.1:8081"` to current domain name.
+Do not forget to change `globalThis.base_url = "http://127.0.0.1:8080"` to current domain name.
 
 ### Running
 
