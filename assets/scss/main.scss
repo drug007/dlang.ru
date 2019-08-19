@@ -3,6 +3,14 @@
 @import "mixin";
 
 
+// susy init
+$susy: (
+    "columns": susy-repeat(12),
+    "gutters": 16px,
+    "spread": "narrow",
+    "container-spread": "narrow",
+);
+
 $darkRed: #6A130E;
 $red: #B2281E;
 $hoverColor: #18c9f3;
@@ -96,7 +104,18 @@ ul {
         border: 1px solid #b2281e;
     }
 }
+pre {
+    background: #eee;
 
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: .5em;
+    }
+}
+code {
+    background: #eee;
+}
 
 .container {
     position: relative;
@@ -111,14 +130,6 @@ body > .container {
     display: flex;
     margin: 100px auto 90px;
 }
-
-// susy init
-$susy: (
-        "columns": susy-repeat(12),
-        "gutters": 16px,
-        "spread": "narrow",
-        "container-spread": "narrow",
-);
 
 span {
     position: relative;

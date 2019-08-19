@@ -9,7 +9,10 @@
 
 <script>
     import Showdown from 'showdown';
-    //import Prism  from 'prismjs';
+    import hljs from 'highlight.js/lib/highlight';
+    import d from 'highlight.js/lib/languages/d';
+    hljs.registerLanguage('d', d);
+    import 'highlight.js/styles/monokai-sublime.css';
 
     export default {
         name: 'Book',
@@ -24,11 +27,14 @@
                 .then(response => {
                     let converter = new Showdown.Converter();
                     converter.setOption('customizedHeaderId', true);
-                    let data = converter.makeHtml(response.data);
-                    /*let loadLanguages = require('prismjs/components/');
-                    loadLanguages(['d']);
-                    data = Prism.highlight(data, Prism.languages.d, 'd');*/
-                    this.book_content = data;
+                    let res = converter.makeHtml(response.data);
+                    res = res.replace(
+                        /(<pre><code.+?class=".*?language-d.*?)(">)(.*?)(<\/code><\/pre>)/gs,
+                        (m, p1, p2, p3, p4) => {
+                            return p1 + " hljs" + p2 + hljs.highlight("d", p3).value + p4;
+                        }
+                    );
+                    this.book_content = res;
                 })
                .catch((error) => {
                    console.log("Can't fetch book content from server: /book.md");
