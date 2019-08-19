@@ -1,9 +1,14 @@
 const url = "http://127.0.0.1:8080/";
 
 import vibe.d;
+import dini;
 
 shared static this()
 {
+    auto ini = Ini.Parse("config.ini");
+    auto settings = new HTTPServerSettings;
+    settings.port = to!ushort(ini.getKey("port"));
+    settings.bindAddresses = [ini.getKey("ipv6"), ini.getKey("ipv4")];
 
     auto router = new URLRouter;
     router.get("*", serveStaticFiles("public/"));
@@ -11,9 +16,6 @@ shared static this()
     router.get("*", serveIndex("public/dist/index.html"));
 
 
-    auto settings = new HTTPServerSettings;
-    settings.port = 8080;
-    settings.bindAddresses = ["::1", "127.0.0.1"];
 
     listenHTTP(settings, router);
 

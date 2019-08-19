@@ -1,31 +1,33 @@
 {
-  "name": "dlang.ru",
-  "description": "server side for dlang.ru",
-  "authors": [
-    "Dmitry Bubnenkov", "DarkRiDDeR"
-  ],
-  "homepage": "https://github.com/DarkRiDDeR/dlang.org.ru",
-  "license": "MIT",
-  "copyright": "Copyright © 2019, Dmitry Bubnenkov",
-  "sourcePaths": [
-    "server"
-  ],
-  "configurations": [
-    {
-      "name": "app",
-      "targetType": "executable",
-      "targetName": "app",
-      "preRunCommands": [
-        "npm run build"
-      ],
-      "versions": [
-        "VibeDefaultMain"
-      ],
-      "dependencies": {
-        "vibe-d": "~>0.8.5"
-      }
-    }
-  ],
-  "dependencies": {
-  }
+	"authors": [
+		"Dmitry Bubnenkov",
+		"DarkRiDDeR"
+	],
+	"configurations": [
+		{
+			"dependencies": {
+				"vibe-d": "~>0.8.5"
+			},
+			"name": "app",
+			"targetName": "dlang",
+			"targetType": "executable",
+			"versions": [
+				"VibeDefaultMain"
+			]
+		}
+	],
+	"copyright": "Copyright © 2019, Dmitry Bubnenkov",
+	"dependencies": {
+		"dini": "~>2.0.0"
+	},
+	"description": "server side for dlang.ru",
+	"dflags": [
+		"-lowmem"
+	],
+	"homepage": "https://github.com/DarkRiDDeR/dlang.org.ru",
+	"license": "MIT",
+	"name": "dlang.ru",
+	"sourcePaths": [
+		"server"
+	]
 }
