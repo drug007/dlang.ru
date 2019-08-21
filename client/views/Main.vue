@@ -51,7 +51,7 @@
                             li генерирует хорошо оптимизированный код;
                             li поддерживает множество платформ и архитектур.
                     .tiles-items__item
-                        h3 DMD
+                        h3 GDC
                         ul
                             li фронтэнд для компилятора GCC;
                             li генерирует хорошо оптимизированный код;
@@ -72,7 +72,7 @@
                         div: img(src="@/assets/img/os/android.png" alt="" title="Android")
                         div
                             img(src="@/assets/img/os/ios.png" alt="" title="iOS")
-                            div unstered
+                            div untested
                     .tiles-os__item
                         div
                             img(src="@/assets/img/os/windows.svg" alt="" title="Windows")
@@ -80,10 +80,10 @@
                         div: img(src="@/assets/img/os/linux.png" alt="" title="Linux")
                         div
                             img(src="@/assets/img/os/xos.png" alt="" title="X OS")
-                            div unstered
+                            div untested
                         div
                             img(src="@/assets/img/os/freebsd.png" alt="" title="FreeBSD")
-                            div unstered
+                            div untested
                 .tiles-btns
                     .tiles-btns__item
                         Btn(name="Скачать", target="_blank", to="https://dlang.org/tiles.html#dmd")
@@ -154,7 +154,6 @@
                 .quote-block
                     p.quote-block__text D – это язык программирования, цель которого – помочь программистам справиться с непростыми современными проблемами разработки программного обеспечения. Он создает все условия для организации взаимодействия модулей через точные интерфейсы, поддерживает целую федерацию тесно взаимосвязанных парадигм программирования (императивное, объектно-ориентированное, функциональное и метапрограммирование), обеспечивает изоляцию потоков, модульную безопасность типов, предоставляет рациональную модель памяти и многое другое.
                     div.quote-block__author Андрей Александреску
-
 
         section.company
             .container

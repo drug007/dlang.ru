@@ -17,19 +17,31 @@ $hoverColor: #18c9f3;
 $elementTransition: 0.25s ease-out; // btn, link, select
 
 
-html, body {
-    background-color: #FFF;
+* {
+    outline: none;
 }
 
+html, body {
+    height: 100%;
+    background-color: #FFF;
+}
 body {
     font: normal 15px 'Open Sans', Arial, sans-serif;
     color: #000;
     min-width: 960px;
+
+
+    > .wrap {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+}
+.content {
+    display: table-row;
+    height: 100%;
 }
 
-* {
-    outline: none;
-}
 h1, h2 {
     color: #93231C;
 }
@@ -120,7 +132,6 @@ code {
 .container {
     position: relative;
     width: calc(100% - 150px);
-    min-width: 960px;
     max-width: 1366px;
     margin: 0 auto;
     padding: 0 75px;
@@ -152,6 +163,7 @@ header {
     z-index: 2;
     height: 50px;
     background: linear-gradient(146deg, $darkRed, #962018);
+    min-width: 960px;
 
     > .container {
         height: 100%;
@@ -360,6 +372,7 @@ section + section {
         }
         &__ldc img {
             width: 100%;
+            margin-left: -5%;
         }
         &__gdc img {
             width: 80%;
@@ -412,10 +425,12 @@ section + section {
 
     .container {
         display: flex;
+        align-items: flex-start;
     }
     img {
         min-height: 300px;
         margin-right: 3rem;
+        max-width: 30%;
     }
     p {
         line-height: 1.6em;
@@ -426,6 +441,7 @@ section + section {
         justify-content: space-between;
 
         &__author {
+            margin-top: 2em;
             text-align: right;
             font-style: italic;
         }
