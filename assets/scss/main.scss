@@ -177,27 +177,6 @@ header {
         display: flex;
         align-items: center;
         color: #FFF;
-
-        img {
-            height: 1.2em;
-            margin-left: 5px;
-        }
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        margin-right: 0.5rem;
-
-        a {
-            border-bottom: solid transparent 1px;
-        }
-        a:hover {
-            border-bottom-color: #FFF;
-        }
-        a + a {
-            margin-left: 1.5em;
-        }
     }
 }
 header.vue-fixed-header--isFixed {
@@ -217,6 +196,42 @@ header.vue-fixed-header--isFixed {
 header.vue-fixed-header--isFixed + .header-substrate {
     display: block;
 }
+
+.header-link {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+
+    a {
+        border-bottom: solid transparent 1px;
+    }
+    a:hover {
+        border-bottom-color: #FFF;
+    }
+    a + a {
+        margin-left: 1.5em;
+    }
+
+    img {
+        height: 1.4em;
+        margin-left: 5px;
+    }
+
+    &__telegram, &__github {
+        border-bottom: none !important;
+
+        img {
+            transition: 0.25s ease-out;
+        }
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+    &__github img {
+        height: 1.55em;
+    }
+}
+
 @keyframes animated-fixed-menu {
     0% {
         -webkit-transform: translateY(-100%);

@@ -28,6 +28,7 @@
                     let converter = new showdown.Converter();
                     let data = converter.makeHtml(response.data);
                     data = data.replace(/(<a.+?href=('|")(?!http))/g, '$1https://github.com/deviator/duseful/blob/master/');
+                    data = data.replace(/<a\s/g, '<a target="_blank" ');
                     this.book_content = data;
                 })
                .catch(() => console.log("Can't fetch book content from server: https://raw.githubusercontent.com/deviator/duseful/master/README.md"))
