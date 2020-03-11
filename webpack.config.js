@@ -134,7 +134,7 @@ module.exports = (env, argv) => ({
                 test: /\.md$/,
             },
         ]) : false,
-    ],
+    ].filter(Boolean),
     devServer: {
         contentBase: SRC_DIR,
         watchContentBase: true,
