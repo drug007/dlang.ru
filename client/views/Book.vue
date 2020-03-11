@@ -31,7 +31,10 @@
                     res = res.replace(
                         /(<pre><code.+?class=".*?language-d.*?)(">)(.*?)(<\/code><\/pre>)/gs,
                         (m, p1, p2, p3, p4) => {
-                            return p1 + " hljs" + p2 + hljs.highlight("d", p3).value + p4;
+                            // fix issue #1
+                            let hl = hljs.highlight("d", p3).value;
+                            hl = hl.replace(/&amp;((?:gt|lt|amp);)/g, '&$1');
+                            return p1 + " hljs" + p2 + hl + p4;
                         }
                     );
                     this.book_content = res;

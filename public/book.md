@@ -1159,9 +1159,9 @@ Block A
 ```d
   bool myValue = true;
 
-  if(!myValue) // если myValue истина
+  if(!myValue) // если myValue ложь
     writeln("Block A");
-  else // если myValue ложь
+  else // если myValue истина
     writeln("Block B");
 ```
 Результат:    

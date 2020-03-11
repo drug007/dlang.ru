@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin'); // js compress
+const CopyPlugin = require('copy-webpack-plugin');
 
 const SRC_DIR = path.join(__dirname, "client");
 const PUBLIC_DIR = path.join(__dirname, "public");
@@ -96,6 +97,19 @@ module.exports = (env, argv) => ({
                     },
                 ],
             },
+            {
+                test: /\.md$/,
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "/",
+                    }
+                }],
+                include: [
+                    PUBLIC_DIR
+                ],
+            },
         ]
     },
     output: {
@@ -113,12 +127,22 @@ module.exports = (env, argv) => ({
             template: path.join(SRC_DIR, "index.pug"),
             filename: "index.html"
         }),
+        argv.mode !== "production" ? new CopyPlugin([
+            {
+                from: 'public/*',
+                to: '[name].[ext]',
+                test: /\.md$/,
+            },
+        ]) : false,
     ],
     devServer: {
         contentBase: SRC_DIR,
         watchContentBase: true,
         port: 8090,
-        open: false
+        open: false,
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
     }
 });
 
