@@ -1,9 +1,9 @@
 ### About
-Russian community site about D Programming language.
+Russian community site about D Programming language http://dlang.ru.
 
 ### Book
 
-You are free to contribute to dlang.ru/book
+You are free to contribute to http://dlang.ru/dlang.ru/book
 
 ### Contacts
 
