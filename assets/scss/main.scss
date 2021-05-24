@@ -29,6 +29,7 @@ body {
     font: normal 15px 'Open Sans', Arial, sans-serif;
     color: #000;
     min-width: 960px;
+    max-width: 2560px;
 
 
     > .wrap {
@@ -317,6 +318,20 @@ header.vue-fixed-header--isFixed + .header-substrate {
         background-color: #FFF;
         transform: rotate(-25deg) translateY(0%);
         transform-origin: top left;
+    }
+}
+.free_bel {
+    position: absolute;
+    left: 0;
+    width: 30%;
+    max-width: 500px;
+    text-align: left;
+    font-size: 1.1em;
+
+    div {
+        margin-top: 15px;
+        padding-left: 1em;
+        max-width: 60%;
     }
 }
 
