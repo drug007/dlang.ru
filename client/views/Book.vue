@@ -1,9 +1,5 @@
 <template lang="pug">
     .container
-        .gh-btns
-            gh-btns-watch(slug="bubnenkoff/dlang.ru", show-count)
-            gh-btns-star(slug="bubnenkoff/dlang.ru", show-count)
-            gh-btns-fork(slug="bubnenkoff/dlang.ru", show-count)
         div(v-html="this.book_content")
 </template>
 
