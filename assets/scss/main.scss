@@ -320,20 +320,6 @@ header.vue-fixed-header--isFixed + .header-substrate {
         transform-origin: top left;
     }
 }
-.free_bel {
-    position: absolute;
-    left: 0;
-    width: 30%;
-    max-width: 500px;
-    text-align: left;
-    font-size: 1.1em;
-
-    div {
-        margin-top: 15px;
-        padding-left: 1em;
-        max-width: 60%;
-    }
-}
 
 section {
     position: relative;
