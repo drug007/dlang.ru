@@ -76,6 +76,7 @@ module.exports = (env, argv) => ({
                     {
                         loader: "svg-url-loader",
                         options: {
+                            name: "[name].[ext]",
                             //limit: 8192
                         }
                     },
@@ -87,7 +88,12 @@ module.exports = (env, argv) => ({
             {
                 test: /\.(gif|png|jpe?g)$/i,
                 use: [
-                    'file-loader',
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "[name].[ext]"
+                        }
+                    },
                     {
                         loader: 'image-webpack-loader',
                         options: {
