@@ -9,7 +9,8 @@
 
 <script>
     import showdown  from  'showdown';
-    //import GithubButton from 'vue-github-button'
+    import {replaceURLs} from "../funcs";
+
     export default {
         name: 'Links',
         data () {
@@ -17,10 +18,6 @@
                 book_content: ''
             }
         },
-        components:
-            {
-                //GithubButton
-            },
         created()
         {
             this.$axios.get("https://raw.githubusercontent.com/deviator/duseful/master/README.md")
@@ -29,6 +26,7 @@
                     let data = converter.makeHtml(response.data);
                     data = data.replace(/(<a.+?href=('|")(?!http))/g, '$1https://github.com/deviator/duseful/blob/master/');
                     data = data.replace(/<a\s/g, '<a target="_blank" ');
+                    data = replaceURLs( data );
                     this.book_content = data;
                 })
                .catch(() => console.log("Can't fetch book content from server: https://raw.githubusercontent.com/deviator/duseful/master/README.md"))

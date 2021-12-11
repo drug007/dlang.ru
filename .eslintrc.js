@@ -4,6 +4,9 @@ module.exports = {
     browser: true,
     node: true
   },
+  globals: {
+    "__PUBLIC_DIR__": true
+  },
   parserOptions: {
     "parser": "babel-eslint",
     "ecmaVersion": 2017
@@ -17,5 +20,5 @@ module.exports = {
     "vue"
   ],
   rules: {
-    "vue/max-attributes-per-line": "off",
+    "vue/max-attributes-per-line": "off"
   }};

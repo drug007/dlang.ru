@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin'); // js compress
 const CopyPlugin = require('copy-webpack-plugin');
@@ -120,7 +120,7 @@ module.exports = (env, argv) => ({
     },
     output: {
         path: argv.mode !== "production" ? PUBLIC_DIR : path.join(PUBLIC_DIR, "dist"),
-        publicPath: argv.mode !== "production" ? "" : "/dist/",
+        publicPath: argv.mode !== "production" ? "/" : "/dist/",
         filename: "bundle.js"
     },
     devtool: argv.mode !== "production" ? "eval-cheap-module-source-map" : "source-map",
@@ -133,10 +133,15 @@ module.exports = (env, argv) => ({
             template: path.join(SRC_DIR, "index.pug"),
             filename: "index.html"
         }),
+        new webpack.DefinePlugin({
+            __PUBLIC_DIR__: argv.mode !== "production"
+                ? JSON.stringify("/public/")
+                : JSON.stringify("https://raw.githubusercontent.com/DarkRiDDeR/dlang.ru/v2/public/")
+        }),
         argv.mode !== "production" ? new CopyPlugin([
             {
-                from: 'public/*',
-                to: '[name].[ext]',
+                from: 'public/**',
+                to: '[path][name].[ext]',
                 test: /\.md$/,
             },
         ]) : false,
@@ -145,7 +150,8 @@ module.exports = (env, argv) => ({
         contentBase: SRC_DIR,
         watchContentBase: true,
         port: 8090,
-        open: false,
+        historyApiFallback: true,
+        open: true,
         headers: {
             'Access-Control-Allow-Origin': '*'
         }

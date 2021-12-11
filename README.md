@@ -12,6 +12,16 @@ Our Telegram channel https://t.me/dlangru
 ### Screenshot
 ![Screenshot](screenshot.webp)
 
+### Developing
+
+Nodejs should be installed. Run using npm:
+
+`npm run dev`
+
+or using yarn:
+
+`yarn dev`
+
 ### Setup
 
 nodejs should be installed 

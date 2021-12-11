@@ -38,6 +38,10 @@ body {
         width: 100%;
     }
 }
+hr {
+    margin: 15px 0;
+    color: #ddd;
+}
 .content {
     display: table-row;
     height: 100%;
@@ -81,7 +85,7 @@ p {
     margin: 0;
 }
 p + p {
-    margin-top: 1em;
+    margin-top: 0.75em;
 }
 ul {
     list-style: none;
@@ -115,6 +119,17 @@ ul {
         height: 3px;
         background-color: transparent;
         border: 1px solid #b2281e;
+    }
+}
+ol {
+    padding: 1em 0 1em 2em;
+    margin: 0;
+
+    li::marker {
+        font-weight: bold;
+    }
+    li + li {
+        margin-top: 0.5em;
     }
 }
 pre {
@@ -466,7 +481,7 @@ section + section {
 }
 
 .company {
-    margin: 2rem 0;
+    margin-top: 2rem;
 }
 .company-items {
     display: flex;
@@ -550,6 +565,7 @@ footer {
     align-items: center;
     background-color: #F5F5F5;
     padding: 25px;
+    margin-top: 2rem;
     color: #707070;
 
     p + p {
