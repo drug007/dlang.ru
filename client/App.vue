@@ -8,6 +8,7 @@
                         router-link(to="/") Главная
                         router-link(to="/faq") FAQ
                         router-link(to="/links") Ссылки
+                        router-link(to="/blog") Блог
                         router-link(to="/book") Online-учебник
                         a.header-link__telegram(href="https://t.me/dlangru" target="_blank")
                             img(src="@/assets/img/telegram.svg", alt="Telegram")
