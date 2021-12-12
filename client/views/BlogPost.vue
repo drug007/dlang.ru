@@ -30,7 +30,7 @@
                     let data = highlightDlang( converter.makeHtml(response.data) );
                     data = data.replace(/<a\s/g, '<a target="_blank" ');
                     data = replaceURLs( data );
-                    data = data.replace(/(<img.+?src=('|")(?!http))/g, '$1/public/' + window.location.pathname + '/');
+                    data = data.replace(/(<img.+?src=('|")(?!http))/g, '$1' + __PUBLIC_DIR__ + window.location.pathname + '/');
                     this.blog_content = data;
                 })
                .catch((error) => {

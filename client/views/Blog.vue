@@ -30,8 +30,12 @@
             [...document.getElementById("blog").getElementsByTagName('a')]
                 .forEach(( a ) => {
                     a.onclick = (e) => {
-                        e.preventDefault();
-                        this.$router.push('/blog/' + a.getAttribute("href"));
+                        const href = a.getAttribute("href");
+                        if ( !href.match(/^http/) )
+                        {
+                            e.preventDefault();
+                            this.$router.push('/blog/' + a.getAttribute("href"));
+                        }
                     };
                 });
         }
