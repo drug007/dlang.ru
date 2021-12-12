@@ -34,7 +34,7 @@
                         if ( !href.match(/^http/) )
                         {
                             e.preventDefault();
-                            this.$router.push('/blog/' + a.getAttribute("href"));
+                            this.$router.push(a.getAttribute("href"));
                         }
                     };
                 });
