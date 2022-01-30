@@ -6,6 +6,7 @@ import 'highlight.js/styles/monokai-sublime.css';
 export function highlightDlang ( text )
 {
     return text.replace(
+
         /(<pre><code.+?class=".*?language-d.*?)(">)(.*?)(<\/code><\/pre>)/gs,
         (m, p1, p2, p3, p4) => {
             // fix issue #1
@@ -17,5 +18,7 @@ export function highlightDlang ( text )
 }
 
 export function replaceURLs ( text ) {
-    return text.replace(/\b((?<!((href)|(src))=('|"))https?:\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/ig, '<a href="$1" target="_blank">$1</a>');
+    // fix issue #5 Safari: Invalid regular expression: invalid group specifier name
+    // /\b((?<!((href)|(src))=('|"))https?:\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/ig
+    return text.replace(/([^=][^'"])(https?:\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/ig, '$1<a href="$2" target="_blank">$2</a>');
 }
