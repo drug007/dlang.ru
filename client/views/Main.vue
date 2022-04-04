@@ -86,7 +86,7 @@
                             div untested
                 .tiles-btns
                     .tiles-btns__item
-                        Btn(name="Скачать", target="_blank", to="https://dlang.org/tiles.html#dmd")
+                        Btn(name="Скачать", target="_blank", to="https://dlang.org/download.html#dmd")
                         Btn(name="Wiki",    target="_blank", to="https://wiki.dlang.org/DMD")
                     .tiles-btns__item
                         Btn(name="Скачать", target="_blank", to="https://github.com/ldc-developers/ldc#installation")
